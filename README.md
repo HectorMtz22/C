@@ -1,2 +1,5 @@
 # C
-Examples for the C-language basic programming course
+
+## By HectorMtz22
+
+C-language basic programming course
