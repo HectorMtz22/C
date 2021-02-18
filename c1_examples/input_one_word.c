@@ -10,6 +10,12 @@
 int main() {
 	int c; //Typical declaration
 
+	/*
+	 * I normally put the curly braces
+	 * Because I have the habit 
+	 * in JS
+	*/
+
 	while ((c = getchar()) != EOF) {
 		if (c == ' ') { // Check if there are spaces
 			printf(NW); // Prints a New Line
