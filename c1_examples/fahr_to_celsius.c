@@ -4,8 +4,8 @@ int main() {
 	float fahr, celsius; // Variables
 	float lower, upper, step; // I could pass this with parameters
 
-	lower = 0;
-	upper = 300;
+	lower = 300; // I reversed this values
+	upper = 0;
 	step = 10; // I changed this value
 
 	fahr = lower; // This is the initialization
@@ -21,9 +21,9 @@ int main() {
 	
 	printf("Heading Fahrenheit to Celsius\n"); // Prints a Heading
 	
-	while (fahr <= upper) {
+	while (fahr >= upper) {
 		celsius = (5.0 / 9.0) * (fahr - 32.0); // New op
 		printf("%3.0f\t%6.1f\n", fahr, celsius);
-		fahr += step; // I wrote this like in JavaScript and it works!
+		fahr -= step; // I wrote this like in JavaScript and it works!
 	}
 }
