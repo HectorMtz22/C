@@ -19,6 +19,8 @@ int main() {
 	// celsius = 5 * (fahr - 32) / 9;
 	// This is a critical operation OJITO
 	
+	printf("Heading Fahrenheit to Celsius\n"); // Prints a Heading
+	
 	while (fahr <= upper) {
 		celsius = (5.0 / 9.0) * (fahr - 32.0); // New op
 		printf("%3.0f\t%6.1f\n", fahr, celsius);
