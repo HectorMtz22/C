@@ -7,6 +7,8 @@ int main() {
 	initial = 0; // Initial value
 	final = 20;
 	step = 2;
+	
+	printf("Celsius to Fahrenheit"); // Heading
 
 	// I used for instead of while loop
 
