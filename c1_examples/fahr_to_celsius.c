@@ -4,11 +4,11 @@ int main() {
 	float fahr, celsius; // Variables
 	float lower, upper, step; // I could pass this with parameters
 
-	lower = 300; // I reversed this values
-	upper = 0;
-	step = 10; // I changed this value
+	#define LOWER = 300; // I reversed this values
+	#define UPPER = 0; // I changed this to constants
+	#define STEP = 10; // I changed this value
 
-	fahr = lower; // This is the initialization
+	fahr = LOWER; // This is the initialization
 	
 	/* We have a critical operation
 	 * This is because we declared our variables as "integers"
@@ -21,9 +21,9 @@ int main() {
 	
 	printf("Heading Fahrenheit to Celsius\n"); // Prints a Heading
 	
-	while (fahr >= upper) {
+	while (fahr >= UPPER) {
 		celsius = (5.0 / 9.0) * (fahr - 32.0); // New op
 		printf("%3.0f\t%6.1f\n", fahr, celsius);
-		fahr -= step; // I wrote this like in JavaScript and it works!
+		fahr -= STEP; // I wrote this like in JavaScript and it works!
 	}
 }
