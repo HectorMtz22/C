@@ -1,14 +1,23 @@
+// I just copied the "fahr_to_celsius.c"
+
 #include <stdio.h> //Basic i/o printf
+#include <stdlib.h>
 
 int main() {
-	float fahr, celsius; // Variables
-	float lower, upper, step; // I could pass this with parameters
+	int fahr, celsius; // Variables
+	int lower, upper, step; // I could pass this with parameters
+	int read;
 
 	lower = 0;
 	upper = 300;
-	step = 10; // I changed this value
+	step = 10;
 
 	fahr = lower; // This is the initialization
+
+	// It don't works!
+	// read = scanf("Hi");
+	// printf(read);
+	// upper = atoi(read);
 	
 	/* We have a critical operation
 	 * This is because we declared our variables as "integers"
@@ -16,12 +25,9 @@ int main() {
 	 * Proceed with CAUTION
 	*/
 
-	// celsius = 5 * (fahr - 32) / 9;
-	// This is a critical operation OJITO
-	
 	while (fahr <= upper) {
-		celsius = (5.0 / 9.0) * (fahr - 32.0); // New op
-		printf("%3.0f\t%6.1f\n", fahr, celsius);
+		celsius = 5 * (fahr - 32) / 9; // This is a critical operation OJITO
+		printf("%d\t%d\n", fahr, celsius);
 		fahr += step; // I wrote this like in JavaScript and it works!
 	}
 }
