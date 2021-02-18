@@ -2,11 +2,11 @@
 
 int main() {
 	float fahr, celsius; // Variables
-	float lower, upper, step; // I could pass this with parameters
+	// float lower, upper, step; // I could pass this with parameters
 
-	#define LOWER = 300; // I reversed this values
-	#define UPPER = 0; // I changed this to constants
-	#define STEP = 10; // I changed this value
+	#define LOWER 300 // I reversed this values
+	#define UPPER 0 // I changed this to constants
+	#define STEP 10 // I changed this value
 
 	fahr = LOWER; // This is the initialization
 	
