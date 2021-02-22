@@ -1,7 +1,7 @@
 #include <stdio.h> 
 
 int main() {
-	int c, i, nwhite, nother;
+	int c, i, j, k, nwhite, nother;
 	int ndigit[10];
 
 	nwhite = nother = 0;
@@ -17,6 +17,16 @@ int main() {
 		} else {
 			++nother;
 		}
+	}
+
+	// Histogram
+	printf("\nHistogram\n");
+	for (j = 0; j < 10; j++) {
+		printf("%d: %d times ", j, ndigit[j]);
+		for (k = 1; k <= ndigit[j]; k++) {
+			printf("#");
+		}
+		printf("\n");
 	}
 
 	printf("digits =");
