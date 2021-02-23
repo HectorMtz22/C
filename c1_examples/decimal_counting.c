@@ -34,13 +34,13 @@ int main() {
 }
 
 int histogram(int ndigit[]) {
-	int j, k; // For the for loops
+	int i, j; // For the for loops
 
 	// Histogram
 	printf("\nHistogram\n"); // Headline
-	for (j = 0; j < 10; j++) {
-		printf("%d: %d times ", j, ndigit[j]);
-		for (k = 1; k <= ndigit[j]; k++) {
+	for (i = 0; i < 10; i++) {
+		printf("%d: %d times ", i, ndigit[i]);
+		for (j = 1; j <= ndigit[i]; j++) {
 			printf("#"); // Hastags of horizontal histogram
 		}
 		printf("\n");
