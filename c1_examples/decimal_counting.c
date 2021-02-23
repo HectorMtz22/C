@@ -22,25 +22,26 @@ int main() {
 		}
 	}
 
-	histogram(ndigit);
+	histogram(ndigit); // It runs the histogram
 
 	printf("digits =");
 	for (i = 0; i < 10; i++) {
 		printf(" %d", ndigit[i]);
 	}
 	printf(", white space = %d, other = %d\n", nwhite, nother);
+
 	return 0;
 }
 
 int histogram(int ndigit[]) {
-	int j, k;
+	int j, k; // For the for loops
 
 	// Histogram
-	printf("\nHistogram\n");
+	printf("\nHistogram\n"); // Headline
 	for (j = 0; j < 10; j++) {
 		printf("%d: %d times ", j, ndigit[j]);
 		for (k = 1; k <= ndigit[j]; k++) {
-			printf("#");
+			printf("#"); // Hastags of horizontal histogram
 		}
 		printf("\n");
 	}
