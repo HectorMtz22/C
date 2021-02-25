@@ -1,4 +1,5 @@
-_This_is_a_header
-This is normal text and this_is_bold-faced_text.
+_HelloThis_is_a_header
+This is normal text and this_is_bold-faced_text.this_is_bold-faced_text.
 
 The image above will be entirely skipped in the plain-text output, aswill the JavaScript below.
+_";
