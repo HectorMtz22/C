@@ -1,65 +1,77 @@
-#include <stdio.h> // Basic i/o
-#include <ctype.h> // isspace
-#include <string.h> // strstr
-
-#define IN 1
-#define OUT 0
-
-#define NONE 0
-#define P 1
-#define STRONG 2
-
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 #define MAX 80
 
+int convert_to_line();
+int ignore_tags();
+int check_tag();
+int print();
+int spacesToUnderscore();
 char linea[MAX];
 
-int print();
-int checkTag(char linea[], int ignore);
-int spacesToUnderscore(char linea[]);
-
 int main() {
-	int c;
-	int isinside = OUT;
 	extern char linea[];
-  int ignore = 1;
+	int ignore = 1;
 	int tag = 0;
-  while ((print()) == 0) { 
-		tag = checkTag(linea, ignore);
-		if (tag == P) {
-      ignore = 0;
-		} 
-    if (!ignore) {
-      printf("%s\n", linea);
-    }
-    if (tag == NONE) {
-      ignore = 1;
-    }
-		if (tag == STRONG) {
-			spacesToUnderscore(linea);
+	int p, strong, h1;
+	p = strong = h1 = 0;
+	while (convert_to_line() == 0) {
+		if (strstr(linea, "<p>") != NULL) {
+			p++;
 		}
-    
-  }
-  return 0;
-
-}
-
-int checkTag(char linea[], int ignore) {
-	if (strstr(linea, "<p>") != NULL) { // check for substring
-		return P;
-  }
-	if (strstr(linea, "<strong>") != NULL) { // check for substring
-		return STRONG;
-  }
-	if (strstr(linea, "</strong>") != NULL) { // check for substring
-		return NONE;
-  }
-	if (!ignore) {
-		return P;
+		if (p > 0) {
+			print();
+		}
+		if (strstr(linea, "</p>") != NULL) {
+			p--;
+		}
+		if (strstr(linea, "<strong>") != NULL) {
+			strong++;
+		}
+		if (strstr(linea, "</strong>") != NULL) {
+			strong--;
+		}
 	}
-	return NONE;
+	return 0;
 }
 
-int spacesToUnderscore(char linea[]) {
+int check_tag() {
+	extern char linea[];
+	if (strstr(linea, "<p>") != NULL) {
+		return 1;
+	}
+	if (strstr(linea, "</p>") != NULL) {
+		return 0;
+	}
+	return 0;
+}
+
+int print() {
+	extern char linea[];
+	int ignore = 0;
+	int i;
+	int num_max = strlen(linea);
+
+	for (i = 0; i < num_max; i++) {
+		if (linea[i] == '<') {
+			if (strstr(linea, "strong") != NULL) {
+				spacesToUnderscore();
+			}
+			ignore = 1;
+		} 
+		if (!ignore) {
+			
+			printf("%c", linea[i]);
+		}
+		if (linea[i] == '>') {
+			ignore = 0;
+		}
+	}
+}
+
+int spacesToUnderscore() {
+	extern char linea[];
 	int space;
 	int i;
 	for (i = 0; i < MAX ; i++) {
@@ -67,10 +79,10 @@ int spacesToUnderscore(char linea[]) {
       space = 1;
     } else {
       if (space)  {
-				linea[i] = '_';
+				printf("_");
 				space = 0;
       }
-    //printf("%c", linea[i]);
+    printf("%c", linea[i]);
 		// putchar(linea[i]);
   	}
 	}
@@ -78,7 +90,26 @@ int spacesToUnderscore(char linea[]) {
 
 }
 
-int print() {
+int ignore_tags() {
+	extern char linea[];
+	int ignore = 0;
+	int i;
+	int num_max = strlen(linea);
+
+	for (i = 0; i < num_max; i++) {
+		if (linea[i] == '<') {
+			ignore = 1;
+		} 
+		if (!ignore) {
+			printf("%c", linea[i]);
+		}
+		if (linea[i] == '>') {
+			ignore = 0;
+		}
+	}
+}
+
+int convert_to_line() {
   extern char linea[];
   int c, i = 0;
   int sc = 0;
