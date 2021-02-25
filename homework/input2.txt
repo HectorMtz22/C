@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I'm just an Freelancer boy" />
+    <meta
+      name="keywords"
+      content="Hmtzdev, hectormtz22, Hector Mtz, Hector, Freelancer, Developer, Web Development"
+    />
+    <meta name="author" content="Hectormtz22" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" href="img/logo192.png" />
+    <!-- <link rel="manifest" href="manifest.json" /> -->
+    <link rel="icon" href="img/favicon.ico" />
+    <meta name="theme-color" content="#0F1942" />
+    <script
+      src="https://kit.fontawesome.com/7b783cc552.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>HMtzdev</title>
+    <script
+      data-ad-client="ca-pub-9343720165230006"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header" id="home">
+      <svg
+        id="logo"
+        width="309"
+        height="64"
+        viewBox="0 0 309 64"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M43.208 7.816V58H36.656V35.248H11.096V58H4.54401V7.816H11.096V29.848H36.656V7.816H43.208Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M105.3 8.176V58H98.7476V20.848L82.1876 58H77.5796L60.9476 20.776V58H54.3956V8.176H61.4516L79.8836 49.36L98.3156 8.176H105.3Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M124.403 23.944V47.2C124.403 49.12 124.811 50.488 125.627 51.304C126.443 52.072 127.859 52.456 129.875 52.456H134.699V58H128.795C125.147 58 122.411 57.16 120.587 55.48C118.763 53.8 117.851 51.04 117.851 47.2V23.944H112.739V18.544H117.851V8.608H124.403V18.544H134.699V23.944H124.403Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M147.534 52.6H166.902V58H140.046V52.6L159.198 23.872H140.19V18.544H166.758V23.872L147.534 52.6Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M172.955 38.128C172.955 34.096 173.771 30.568 175.403 27.544C177.035 24.472 179.267 22.096 182.099 20.416C184.979 18.736 188.195 17.896 191.747 17.896C194.819 17.896 197.675 18.616 200.315 20.056C202.955 21.448 204.971 23.296 206.363 25.6V4.72H212.987V58H206.363V50.584C205.067 52.936 203.147 54.88 200.603 56.416C198.059 57.904 195.083 58.648 191.675 58.648C188.171 58.648 184.979 57.784 182.099 56.056C179.267 54.328 177.035 51.904 175.403 48.784C173.771 45.664 172.955 42.112 172.955 38.128ZM206.363 38.2C206.363 35.224 205.763 32.632 204.563 30.424C203.363 28.216 201.731 26.536 199.667 25.384C197.651 24.184 195.419 23.584 192.971 23.584C190.523 23.584 188.291 24.16 186.275 25.312C184.259 26.464 182.651 28.144 181.451 30.352C180.251 32.56 179.651 35.152 179.651 38.128C179.651 41.152 180.251 43.792 181.451 46.048C182.651 48.256 184.259 49.96 186.275 51.16C188.291 52.312 190.523 52.888 192.971 52.888C195.419 52.888 197.651 52.312 199.667 51.16C201.731 49.96 203.363 48.256 204.563 46.048C205.763 43.792 206.363 41.176 206.363 38.2Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M260.06 36.76C260.06 38.008 259.988 39.328 259.844 40.72H228.308C228.548 44.608 229.868 47.656 232.268 49.864C234.716 52.024 237.668 53.104 241.124 53.104C243.956 53.104 246.308 52.456 248.18 51.16C250.1 49.816 251.444 48.04 252.212 45.832H259.268C258.212 49.624 256.1 52.72 252.932 55.12C249.764 57.472 245.828 58.648 241.124 58.648C237.38 58.648 234.02 57.808 231.044 56.128C228.116 54.448 225.812 52.072 224.132 49C222.452 45.88 221.612 42.28 221.612 38.2C221.612 34.12 222.428 30.544 224.06 27.472C225.692 24.4 227.972 22.048 230.9 20.416C233.876 18.736 237.284 17.896 241.124 17.896C244.868 17.896 248.18 18.712 251.06 20.344C253.94 21.976 256.148 24.232 257.684 27.112C259.268 29.944 260.06 33.16 260.06 36.76ZM253.292 35.392C253.292 32.896 252.74 30.76 251.636 28.984C250.532 27.16 249.02 25.792 247.1 24.88C245.228 23.92 243.14 23.44 240.836 23.44C237.524 23.44 234.692 24.496 232.34 26.608C230.036 28.72 228.716 31.648 228.38 35.392H253.292Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+        <path
+          d="M283.396 51.952L295.636 18.544H302.62L287.14 58H279.508L264.028 18.544H271.084L283.396 51.952Z"
+          stroke="white"
+          stroke-width="3"
+          mask="url(#path-1-outside-1)"
+        />
+      </svg>
+      <a href="https://instagram.com/hmtzdev" target="_blank">
+        <h2>Made by: Hectormtz22</h2>
+      </a>
+      <img
+        src="img/header/code2.jpg"
+        loading="lazy"
+        alt="I'm just a Freelancer Boy"
+      />
+      <span class="skewed"></span>
+    </header>
+    <span class="description">
+      <p>Hi, this is Hector's Portfolio.</p>
+      <p>
+        You can see this projects if you want to and submit an opinion on my
+        <a
+          href="https://linkedin.com/in/héctor-martínez-a682671b3"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin" title="Linkedin"></i> Linkedin
+        </a>
+        or
+        <a href="https://github.com/HectorMtz22" target="_blank">
+          <i class="fab fa-github" title="Github"></i> Github
+        </a>
+        account.
+      </p>
+    </span>
+    <nav class="nav">
+      <a href="#home">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <a href="#sites">
+        <i class="far fa-file-alt"></i>
+        Sites
+      </a>
+      <a href="#webapps">
+        <i class="fas fa-mobile-alt"></i>
+        Web Apps
+      </a>
+      <a href="#contact">
+        <i class="far fa-id-card"></i>
+        Contact Me
+      </a>
+    </nav>
+
+    <div id="app">
+      <main class="second-title" id="sites">
+        <h1>Sites</h1>
+      </main>
+      <main class="grid-3">
+        <template v-for="(page, index) in pages" :key="page">
+          <section class="section">
+            <a :href="page" target="_blank">
+              <img :src="'/img/sites/page_' + index + '.png'" loading="lazy" />
+            </a>
+          </section>
+        </template>
+      </main>
+      <main class="second-title" id="webapps">
+        <h1>Web Apps</h1>
+      </main>
+      <section class="rounded">
+        <img src="img/second/webapps.jpg" loading="lazy" />
+      </section>
+      <main class="grid-3">
+        <template v-for="(webApp, index) in webApps" :key="webApp">
+          <section class="section">
+            <a :href="webApp" target="_blank">
+              <img
+                :src="'/img/sites/webApp_' + index + '.png'"
+                loading="lazy"
+              />
+            </a>
+          </section>
+        </template>
+      </main>
+    </div>
+    <main class="second-title" id="contact">
+      <h1>Contact Me</h1>
+      <section class="grid-4">
+        <a
+          href="https://instagram.com/hmtzdev"
+          target="_blank"
+          class="instagram"
+        >
+          <span><i class="fab fa-instagram"></i></span>
+          <span>Instagram</span>
+        </a>
+        <a
+          href="https://linkedin.com/in/héctor-martínez-a682671b3"
+          target="_blank"
+          class="linkedin"
+        >
+          <span><i class="fab fa-linkedin"></i></span>
+          <span>Linkedin</span>
+        </a>
+        <a href="https://dev.to/hectormtz22" target="_blank" class="dev">
+          <span><i class="fab fa-dev"></i></span>
+          <span>Dev.to</span>
+        </a>
+        <a
+          href="https://github.com/HectorMtz22/"
+          target="_blank"
+          class="github"
+        >
+          <span><i class="fab fa-github"></i></span>
+          <span>Github</span>
+        </a>
+      </section>
+    </main>
+    <footer>
+      <h3>Made by Hectormtz22</h3>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script type="module">
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hi",
+          pages: [],
+          webApps: [],
+        },
+      });
+      const pages = async () => {
+        const response = await fetch("/pages.json");
+        const movies = await response.json();
+        console.log(movies);
+        app.pages = movies.pages;
+        app.webApps = movies.webApps;
+        return movies;
+      };
+      pages();
+    </script>
+  </body>
+</html>

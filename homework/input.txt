@@ -3,7 +3,8 @@
 <body>
 <h1>This is a header</h1>
 <p>
-This is normal text and <strong>this is bold-faced text</strong>.
+This is normal text and 
+<strong>this is bold-faced text</strong>.
 </p>
 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Piet_Program_Hello_World(1).gif"
 alt="This is an illustration"> 
