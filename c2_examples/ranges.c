@@ -1,11 +1,10 @@
 #include <stdio.h> //printf
-#include <limits.h>
+#include <math.h>
+
+#define CHAR 8
 
 int main() {
-	int i;
-
-	for (i = 0; i < INT_MAX; i++) {
-		
-	}
+	int i = pow(2, CHAR);
+	printf("%d\n", i);	
 }
 
