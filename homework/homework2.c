@@ -1,47 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-
-#define BASE 2
 
 int is_prime(int number) {
-	int i, j, keep;
-	float module;
-	for (i = (number - 1); i < number; i--) {
-		j = i;
-		keep = 0;
-		while (j < number) {
-			module = number % j;
-			if (module == 0) {
-				keep = 0;
-				break;
-			} else {
-				keep = 1;
-			}
-			j--;
-		}
-		if (keep == 1) {
-			printf("This is a prime number: %d\n", i);
-		}
+	int i, prime = 1;
+
+	for (i = 2; i < number; i++) {
+		if ((number % i) == 0) {
+			prime = 0;
+		} 	
 	}
-	return 1;
+	return prime;
 }
 
 int main() {
-	int i, b, new_k;
 	char k[3];
+	int new_k, i, prime;
 
 	printf("Write a number: ");
 	scanf("%s", k);
-
-
 	new_k = atoi(k);
 
-	is_prime(new_k);
-
-	for (i = 0; i < new_k; i++) {
-		b = new_k | i;
-		// printf("%d\n", b);
+	for (i = 1; i <= new_k; i++) {
+		prime = is_prime(i);
+		if (prime) {
+			printf("This is a prime number: %d\n", i);
+		}
 	}
-}
 
+
+}
