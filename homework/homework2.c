@@ -12,6 +12,17 @@ int is_prime(int number) {
 	return prime;
 }
 
+void to_binary(int number) {
+	int i, j;
+	for (i = 128; i > 0; i >>= 1) {
+		if (i & number) {
+			printf("1");
+		} else {
+			printf("0");
+		}
+	}
+}
+
 int main() {
 	char k[3];
 	int new_k, i, prime;
@@ -23,9 +34,8 @@ int main() {
 	for (i = 1; i <= new_k; i++) {
 		prime = is_prime(i);
 		if (prime) {
-			printf("This is a prime number: %d\n", i);
+			to_binary(i);
+			printf(" number eq: %d\n", i);
 		}
 	}
-
-
 }
