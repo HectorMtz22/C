@@ -1,5 +1,27 @@
-_HelloThis_is_a_header
-This is normal text and this_is_bold-faced_text.this_is_bold-faced_text.
-
-The image above will be entirely skipped in the plain-text output, aswill the JavaScript below.
-_";
+<html>
+<head><title>Hello</title></head>
+<body>
+<h>xThis is a header</h>x
+<p>
+This is normal text and 
+<strong>this is bold-faced text</strong>.
+</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c/xPiet_Program_Hello_World()x.gif"
+alt="This is an illustration"> 
+<p>
+The image above will be entirely skipped in the plain-text output, as
+will the JavaScript below.
+</p>
+<div id="output"></div>
+<script type="text/javascript">
+var twoStepsBack = ;x
+var oneStepBack = ;x
+for (i = 0; i < 50; i++) {
+   fibonacci = oneStepBack + twoStepsBack;
+   document.getElementById("output").innerHTML += fibonacci + "<br>";
+   twoStepsBack = oneStepBack;
+   oneStepBack = fibonacci;
+}
+</script>
+</body>
+</html>
