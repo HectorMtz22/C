@@ -5,7 +5,7 @@
 #define IN 1
 
 int main() {
-	int c;
+	int c, i;
 	int last_digit = OUT;
 	int single_q, double_q;
 	single_q = double_q = 0;
@@ -19,7 +19,7 @@ int main() {
 
 	while((c = getchar()) != EOF) {
 		ignore = 0;
-		for (int i = 0; i < 3; i++) {
+		for (i = 0; i < 3; i++) {
 			if (c == c_in[i]) {
 				number++;
 			}
