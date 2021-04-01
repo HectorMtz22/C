@@ -14,7 +14,7 @@ int trim(char s[]) {
 }
 
 int main() {
-	char s[] = "4923";
+	char s[] = "389423 9234283 4923";
 	int new;
 	new = trim(s);
 	printf("%d\n", new);
