@@ -3,11 +3,14 @@
 #include "calc.h"
 
 #define MAXOF 100
+	
+int assign = 0;
 
 int main() {
 	int type;
 	double op2;
 	char s[MAXOF];
+
 
 	while ((type = getop(s)) != EOF) {
 		switch (type) {
@@ -33,9 +36,15 @@ int main() {
 				}
 				break;
 
+			case '=':
+				assign = 1;
+				break;
+
 
 			case '\n':
+				if (!assign) {
 				printf("\t%.8g\n", pop());
+				}
 				break;
 			default: 
 				printf("error: unknown command %s\n", s);
