@@ -39,25 +39,27 @@ int main() {
 				break;
 
 			case '=':
+				// This is an assignment
 				assign = 1;
 				break;
 
 
 			case '\n':
+				// If is not an assignment prints the result
 				if (!assign) {
 					printf("\t%.8g\n", pop());
 				} else {
-					pushAssign(poplet(), pop());
-					assign = 0;
+					pushAssign(poplet(), pop()); // Push in hash table
+					assign = 0; // Change the value to nonassignment
 				}
 				break;
 			default: 
 				if (isalpha(type)) {
-					substitute = readAssign(type);
+					substitute = readAssign(tolower(type));
 					if (substitute != 0.0) {
 						push(substitute);
 					} else {
-						pushlet(type);
+						pushlet(tolower(type));
 					}
 
 				} else {
