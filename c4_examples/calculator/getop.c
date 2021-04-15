@@ -13,6 +13,8 @@ int getop(char s[]) {
 		return c;
 	}
 
+	i = 0;
+
 	if (isdigit(c)) {
 		while (isdigit(s[++i] = c = getch()));
 	}
