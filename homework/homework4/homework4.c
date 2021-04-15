@@ -1,5 +1,6 @@
 #include <stdio.h>  // printf
 #include <stdlib.h> // atof
+#include <ctype.h>
 #include "calc.h"
 
 #define MAXOF 100
@@ -8,6 +9,8 @@ int main() {
 	int type;
 	double op2;
 	char s[MAXOF];
+
+	int assign = 0;
 
 	while ((type = getop(s)) != EOF) {
 		switch (type) {
@@ -32,13 +35,26 @@ int main() {
 					printf("error: zero divisor\n");
 				}
 				break;
+			case '=':
+				assign = 1;
+				break;
 
 
 			case '\n':
-				printf("\t%.8g\n", pop());
+				if (assign) {
+					
+				} else {
+					printf("\t%.8g\n", pop());
+				}
 				break;
 			default: 
-				printf("error: unknown command %s\n", s);
+				// Por aquí podemos poner las asignaciones
+				if (isalpha(type)) {
+					pushlet(type);
+				} else {
+					printf("error: unknown command %s\n", s);
+				}
+
 				break;
 		}
 	}
