@@ -8,12 +8,18 @@ int getop(char s[]) {
 	while((s[0] = c = getch()) == ' ' || c == '\t');
 
 	s[1] = '\0';
+	
+	i = 0;
+	if (isalpha(c)) {
+		pushlet(c);
+	}
 
 	if (!isdigit(c) && c != '.') {
 		return c;
 	}
 
 	i = 0;
+	
 
 	if (isdigit(c)) {
 		while (isdigit(s[++i] = c = getch()));
