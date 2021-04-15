@@ -1,19 +1,25 @@
 #include <stdio.h>
 
+// I read about structures in C
 struct SaveAssign {
 	char key[100];
 	double value[100];
 };
 
 int count = 0;
+// Assing structure
 struct SaveAssign newAssign;
 
+
+// Register assignments 
 void pushAssign(char key, double value) {
 	newAssign.key[count] = key;
 	newAssign.value[count] = value;
 	count++;
 }
 
+// Return the value of the key
+// Transform the key to a value
 int readAssign(char f) {
 	int i;
 
