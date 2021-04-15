@@ -4,6 +4,11 @@
 #include "calc.h"
 
 #define MAXOF 100
+
+/*
+ * Hi! I decided to implement a new concept called hash tables
+ * I implemented this in other languages
+*/
 	
 int assign = 0;
 
