@@ -26,6 +26,9 @@ double pop(void) {
 	}
 }
 
+
+//The same but this time for letters
+
 void pushlet(char f) {
 	if (splet < MAXVAL) {
 		vallet[splet++] = f;

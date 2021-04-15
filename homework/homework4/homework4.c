@@ -39,25 +39,30 @@ int main() {
 				break;
 
 			case '=':
+				// Found an assignment
 				assign = 1;
 				break;
 
 
 			case '\n':
 				if (!assign) {
+					// Execute result
 					printf("\t%.8g\n", pop());
 				} else {
+					// Assign the key  and value for hash table
 					pushAssign(poplet(), pop());
-					assign = 0;
+					assign = 0; // Restart the variable
 				}
 				break;
 			default: 
 				if (isalpha(type)) {
-					substitute = readAssign(type);
+					// Check if exists
+					substitute = readAssign(tolower(type));
 					if (substitute != 0.0) {
 						push(substitute);
 					} else {
-						pushlet(type);
+						// Push letter like numbers
+						pushlet(tolower(type));
 					}
 
 				} else {
