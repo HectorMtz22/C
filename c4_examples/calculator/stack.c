@@ -33,3 +33,13 @@ void pushlet(char f) {
 		printf("error, stack full, can't push %g\n", f);
 	}
 }
+
+
+char poplet(void) {
+	if (splet > 0) {
+		return vallet[--splet];
+	} else {
+		printf("error: stack empty\n");
+		return '0';
+	}
+}

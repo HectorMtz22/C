@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 struct SaveAssign {
-	char key;
-	double value;
+	char key[100];
+	double value[100];
 };
 
 int count = 0;
-struct SaveAssign assign;
+struct SaveAssign newAssign;
 
 void pushAssign(char key, double value) {
-	assign.key = key;
-	assign.value = value;
+	newAssign.key[count] = key;
+	newAssign.value[count] = value;
 	count++;
 }
 
@@ -18,9 +18,12 @@ int readAssign(char f) {
 	int i;
 
 	for (i = 0; i < count; i++) {
-		if (assign == f) {
-			printf("%d on %c\n", assign[i].value ,assign[i].key)
+		if (newAssign.key[i] == f) {
+			printf("key: %c, value: %0.2f\n", newAssign.key[i], newAssign.value[i]);
+			return newAssign.value[i];
 		}
 	}
+
+	return 0;
 
 }
