@@ -13,6 +13,8 @@ void printd(int n) {
 }
 
 int main (int argc, char args[]) {
-	printd(3249723);
+	int number = 3249723;
+	printd(number);
+	printf("\n");
 	return 0;
 }
