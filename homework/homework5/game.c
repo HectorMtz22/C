@@ -51,7 +51,7 @@ int detect_ceros(int columna, int fila) {
   for (m = filaInicio; m <= filaFin; m++) {
     int l;
     for (l = columnaInicio; l <= columnaFin; l++) {
-      if (matrix1[m][l] == 0 || matrix1[m][l] == 1) {
+      if (matrix1[m][l] == 0) {
 				matrix2[m][l] = 1;
 				detect_ceros(m -1, l - 1);
       }
@@ -61,17 +61,3 @@ int detect_ceros(int columna, int fila) {
 }
 
 
-void detect_blanks(int i, int j) {
-	if (matrix1[i][j] == 0) {
-		matrix2[i][j] = 1;
-		if (i < size) {
-			detect_blanks(i++, j);
-		}
-		if (j < size) {
-			detect_blanks(0, j++);
-		}
-	} else {
-		return;
-	}
-	return;
-}

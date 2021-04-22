@@ -1,3 +1,15 @@
+/* Compile like this:
+ * gcc homework5.h homework5.c initialize.c final.c show.c getch.c stack.c getop.c game.c
+ *
+ * You must provide the number of mines with the size of matrix like this:
+ *
+ * ./a.out numberOfMines sizeOfMatrix seed(optional)
+ *
+ * All integer numbers
+ *
+ * Look at README.md
+*/
+
 #include <ctype.h>
 #include "homework5.h"
 
