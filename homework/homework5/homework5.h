@@ -5,3 +5,5 @@ void initialize(int, char **);
 void free_space(void);
 void show(int **);
 int obtainNumber(int, int);
+void rellenar();
+void showDiff();

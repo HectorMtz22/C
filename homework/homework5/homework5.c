@@ -14,10 +14,12 @@ int main(int argc, char** args) {
     matrix1[(rand() % (size))][(rand() % (size))] = -1;
   }
 
+	rellenar();
 
 
 
-	show(matrix1);
+
+	showDiff();
 	
 	free_space();
 	

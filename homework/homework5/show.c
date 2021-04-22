@@ -4,9 +4,44 @@ void show(int **matrix) {
 	extern int size;
 	int i, j;
 
+	printf("    ");
+	for (j = 0; j < size; j++) {
+		printf(" %c ", j + 'A');
+	}
+	printf("\n");
+	j = 0;
+
 	for (i = 0; i < size; i++) {
+		printf("%d |  ", i + 1);
 		for (j = 0; j < size; j++) {
 			printf("%d  ", matrix[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+void showDiff() {
+	extern int **matrix1;
+	extern int **matrix2;
+	extern int size;
+	int i, j;
+
+	printf("    ");
+	for (j = 0; j < size; j++) {
+		printf(" %c ", j + 'A');
+	}
+	printf("\n");
+	j = 0;
+
+	for (i = 0; i < size; i++) {
+		printf("%d |  ", i + 1);
+		for (j = 0; j < size; j++) {
+			if (matrix2[i][j] != 0) {
+				printf("%d  ", matrix1[i][j]);
+			} else {
+				printf("#  ");
+
+			}
 		}
 		printf("\n");
 	}
@@ -48,4 +83,17 @@ int obtainNumber(int fila, int columna) {
     }
   }
   return conteo;
+}
+
+void rellenar() {
+	extern int **matrix1;
+	extern int size;
+	int i, j;
+	for (i = 0; i < size; i++) {
+		for (j = 0; j < size; j++) {
+			if (matrix1[i][j] != -1) {
+				matrix1[i][j] = obtainNumber(i, j);
+			}
+		}
+	}
 }
