@@ -32,8 +32,5 @@ if (args[1]) {
 	for (i = 0; i < size; i++) {
 		matrix1[i] = (int*)malloc(sizeof(int) * size);
 		matrix2[i] = (int*)malloc(sizeof(int) * size);
-		for (j = 0; j < size; j++) {
-
-		}
 	}
 }
