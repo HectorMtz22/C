@@ -26,6 +26,8 @@ int main(int argc, char** args) {
 	rellenar();
 
 	showDiff();
+	printf("Type a column with a row\n");
+	printf("If you type '=', it will capture the mine with a flag\n");
 	while ((type = getop(s)) != EOF) {
 		switch (type) {
 			case NUMBER:
