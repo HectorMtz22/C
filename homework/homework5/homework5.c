@@ -1,16 +1,24 @@
 #include "homework5.h"
 
-int** matrix1; // We are going to use this for print
-int** matrix2; // And this for look the mines
+int** matrix1; // this for look the mines
+int** matrix2; // We are going to use this for print
 
 int mines, size;
 
 int main(int argc, char** args) {
-  int i;
+  int i, j, k, l;
 	initialize(argc, args);
-	
-	for (i = 0; i < (mines * 2); i++) {
-    printf("%d\n", rand() % (size + 1));
+	int positions[mines*2];
+
+	for (i = 0; i < (mines); i++) {
+    matrix1[(rand() % (size))][(rand() % (size))] = -1;
   }
 
+
+
+
+	show(matrix1);
+	
+	free_space();
+	
 }

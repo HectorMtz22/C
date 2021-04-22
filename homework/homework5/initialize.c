@@ -5,6 +5,9 @@
 void initialize(int argc, char **args) {
 	extern int mines;
 	extern int size;
+	extern int** matrix1;
+	extern int** matrix2;
+	int i, j, k;
 if (args[1]) {
 		mines = atoi(args[1]);
 	} else {
@@ -22,4 +25,15 @@ if (args[1]) {
   } else {
     srand(time(NULL));
   }
+
+
+	matrix1 = (int**)malloc(sizeof(int*) * size);
+	matrix2 = (int**)malloc(sizeof(int*) * size);
+	for (i = 0; i < size; i++) {
+		matrix1[i] = (int*)malloc(sizeof(int) * size);
+		matrix2[i] = (int*)malloc(sizeof(int) * size);
+		for (j = 0; j < size; j++) {
+
+		}
+	}
 }
