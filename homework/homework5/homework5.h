@@ -8,6 +8,7 @@ int obtainNumber(int, int);
 void rellenar();
 void showDiff();
 int state(int , int);
+int detect_ceros(int, int);
 
 
 #define NUMBER '0'

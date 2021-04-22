@@ -45,6 +45,7 @@ int main(int argc, char** args) {
 
 					printf("%c %d \n", templet, tempnum);
 					state(templet - '0', tempnum);
+					detect_ceros(templet - '0', tempnum);
 					if (status == -1) {
 						printf("YOU LOST\n");
 						show(matrix1);
