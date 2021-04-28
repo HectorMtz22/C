@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include "tree.h"
 int convert_to_line() {
   extern char username[];
@@ -33,3 +34,44 @@ int convert_to_line() {
 	return c == EOF;
 }
 
+node* insert(char* username, char* password, node* pos, int d) {
+	node* temp;
+	if (pos == NULL) {
+		pos = (node*)malloc(sizeof(node));
+		pos->username = username;
+		pos->password = password;
+		pos->depth = d;
+	} else {
+		if (pos->username == username) {
+			// Aquí vendran los errores que no se puede insertar
+		} else if (pos->username > username) {
+			temp = insert(username, password, pos->leftChild, d + 1);
+			if (pos->leftChild == NULL) {
+				pos->leftChild = temp;
+			}
+		} else {
+			temp = insert(username, password, pos->rightChild, d + 1);
+			if (pos->rightChild == NULL) {
+				pos->rightChild = temp;
+			}
+		}
+	}
+	return pos;
+}
+
+void show(node* pos, char prefix) {
+	int i;
+	char suffix = ' ';
+
+	if (pos != NULL) {
+		for (i = 0; i < pos->depth; i++) {
+			printf(" ");
+		}
+		if (pos->leftChild == NULL && pos->rightChild == NULL) {
+			suffix = '#';
+		}
+		printf("%c %s %s %c\n", prefix, pos->username, pos->password, suffix);
+		show(pos->leftChild, '<');
+		show(pos->rightChild, '>');
+	}
+}

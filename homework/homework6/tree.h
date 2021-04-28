@@ -7,3 +7,5 @@ typedef struct tree {
 } node;
 #define MAX 100
 int convert_to_line(void);
+node* insert(char* , char* , node* , int );
+void show(node*, char);

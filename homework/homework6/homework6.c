@@ -11,14 +11,17 @@ char ins[MAX];
 
 int main() {
 	int c;
+	node* tree = NULL;
 	while((convert_to_line()) != EOF ) {
 		if (strstr(ins, "add")) {
+			insert(username, password, tree, 0);
 			printf("add %s\n", username);
 			printf("add %s\n", password);
-		} else if (strstr(linea, "del")) {
-			printf("del %s\n", linea);
+		} else if (strstr(ins, "del")) {
+			printf("del %s\n", ins);
+			show(tree, '+');
 		} else {
-			printf("Aqui se mostrará tu arbolito\n");
+			show(tree, '+');
 		}
 	}
 	return 0;
