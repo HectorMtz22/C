@@ -31,8 +31,8 @@ int convert_to_line(char username[], char password[]) {
 				}
 		}
   }
-	username[k] = '\0';
-	password[l] = '\0';
+	username[k] = '\t';
+	password[l] = '\t';
 	return c == EOF;
 }
 
@@ -78,4 +78,21 @@ void show(node* pos, char prefix) {
 		show(pos->rightChild, '>');
 	}
 	return;
+}
+
+int del(node* pos,char* username,char* password) {
+		
+	if (pos->user == username) {
+		if (pos->pass == password) {
+			free(pos);
+		} else {
+			printf("error, contraseña incorrecta");
+			return 1;
+		}
+	} else {
+		del(pos->leftChild, username, password);
+		del(pos->rightChild, username, password);
+		return 0;
+	}
+	return 0;
 }

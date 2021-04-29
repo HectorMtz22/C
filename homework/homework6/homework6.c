@@ -19,7 +19,7 @@ int main() {
 	while((convert_to_line(username, password)) != EOF ) {
 		if (strstr(ins, "add")) {
 			i = 0;
-			while (i != '\0') {
+			while (i != '\t') {
 				temp1[i] = username[i];
 				temp2[i] = password[i];
 				i++;
@@ -30,10 +30,8 @@ int main() {
 				arbolito = n;
 			}
 		} else if (strstr(ins, "del")) {
-			
-			show(arbolito, '+');
+			del(arbolito, username, password);
 		} else {
-		printf("%s\n", arbolito->user);
 			show(arbolito, '+');
 		}
 	}

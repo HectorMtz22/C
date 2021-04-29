@@ -9,3 +9,4 @@ typedef struct tree {
 int convert_to_line(char*, char*);
 node* insert(char* , char* , node* , int );
 void show(node*, char);
+int del(node* ,char *, char*);
