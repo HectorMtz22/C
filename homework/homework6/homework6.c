@@ -1,3 +1,16 @@
+
+/*
+
+	Hi, I'm your bran :D
+	I doesn't have enough time to fix bugs
+	
+	You MUST compile like this:
+	
+	$ gcc tree.h aux.c homework6.c
+
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
