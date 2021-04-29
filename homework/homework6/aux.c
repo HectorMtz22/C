@@ -2,9 +2,8 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include "tree.h"
-int convert_to_line() {
-  extern char username[];
-  extern char password[];
+
+int convert_to_line(char username[], char password[]) {
   extern char ins[];
   extern char linea[];
   int c, i, j, k, l;
@@ -25,32 +24,36 @@ int convert_to_line() {
 			case 2:
 				password[l++] = c;
 				break;
+			default:
+				if (c == '\n') {
+					i = j = k = l = 0;
+					break;
+				}
 		}
   }
-	ins[j] = '\0';
 	username[k] = '\0';
 	password[l] = '\0';
-  linea[i] = '\0'; 
 	return c == EOF;
 }
 
-node* insert(char* username, char* password, node* pos, int d) {
+node* insert(char user[], char pass[], node* pos, int d) {
 	node* temp;
 	if (pos == NULL) {
 		pos = (node*)malloc(sizeof(node));
-		pos->username = username;
-		pos->password = password;
+		pos->user = user;
+		pos->pass = pass;
 		pos->depth = d;
 	} else {
-		if (pos->username == username) {
-			// Aquí vendran los errores que no se puede insertar
-		} else if (pos->username > username) {
-			temp = insert(username, password, pos->leftChild, d + 1);
+		if (pos->user == user) {
+			printf("aiwei\n");
+				
+		} else if (pos->user > user) {
+			temp = insert(user, pass, pos->leftChild,  (d + 1));
 			if (pos->leftChild == NULL) {
 				pos->leftChild = temp;
 			}
 		} else {
-			temp = insert(username, password, pos->rightChild, d + 1);
+			temp = insert(user, pass, pos->rightChild, (d + 1));
 			if (pos->rightChild == NULL) {
 				pos->rightChild = temp;
 			}
@@ -70,8 +73,9 @@ void show(node* pos, char prefix) {
 		if (pos->leftChild == NULL && pos->rightChild == NULL) {
 			suffix = '#';
 		}
-		printf("%c %s %s %c\n", prefix, pos->username, pos->password, suffix);
+		printf("%c %s %s %c\n", prefix, pos->user, pos->pass, suffix);
 		show(pos->leftChild, '<');
 		show(pos->rightChild, '>');
 	}
+	return;
 }

@@ -5,23 +5,26 @@
 
 char linea[MAX];
 
-char username[MAX];
-char password[MAX];
 char ins[MAX];
 
 int main() {
 	int c;
-	node* tree = NULL;
-	while((convert_to_line()) != EOF ) {
+	node* n = NULL;
+	node* arbolito = NULL;
+	char username[MAX];
+	char password[MAX];
+
+	while((convert_to_line(username, password)) != EOF ) {
 		if (strstr(ins, "add")) {
-			insert(username, password, tree, 0);
-			printf("add %s\n", username);
-			printf("add %s\n", password);
+			printf("%s %s\n", username, password);
+			n = insert(username, password, arbolito, 0);
+			if (arbolito == NULL) {
+				arbolito = n;
+			}
 		} else if (strstr(ins, "del")) {
-			printf("del %s\n", ins);
-			show(tree, '+');
+			show(arbolito, '+');
 		} else {
-			show(tree, '+');
+			show(arbolito, '+');
 		}
 	}
 	return 0;
