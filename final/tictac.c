@@ -1,7 +1,7 @@
 #include "tictac.h"
 
 int main() {
-    int initial = welcome();
+    int initial = welcome(); // Principal Menu
     switch (initial) {
     case 1:
         play_alone();
