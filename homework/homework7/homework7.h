@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <time.h>
 struct data {
-    int number;
+    char* number;
     char* name;
-    long int entry;
-    long int exit;
+    char* entry;
+    char* exit;
 } *employee ;
 struct ad {
     int number;
@@ -14,3 +14,5 @@ struct ad {
 void welcome(struct tm*);
 int isEmployee(void);
 int read(FILE*);
+int empleado(long int);
+int administrador(void);

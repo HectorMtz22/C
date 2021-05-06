@@ -9,6 +9,7 @@
 int adminStatus = 0;
 
 int main() {
+    int c;
     FILE * database;
     long int tp = time(0);
     struct tm * normalTime = localtime(&tp);
@@ -23,5 +24,14 @@ int main() {
         read(database);
         fclose(database);
     }
+
+    printf("Selecciona lo que deseas hacer\n");
+
+    if (adminStatus) {
+        administrador();
+    } else {
+        empleado(tp);
+    }
+
     return 0;
 }
