@@ -7,3 +7,24 @@ int welcome() {
     scanf("%d", &number);
     return number;
 }
+
+// Basic rules for the game
+int play() {
+
+}
+
+
+// If the initial case is 1
+int play_alone() {
+    printf("You selected play alone\n");
+}
+
+// If the initial case is 2
+int play_with_someone() {
+    printf("You selected play with another person\n");
+}
+
+// If the initial case is 3
+int get_scores() {
+    printf("Your scores:\n");
+}

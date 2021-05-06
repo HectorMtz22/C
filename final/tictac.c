@@ -4,13 +4,13 @@ int main() {
     int initial = welcome();
     switch (initial) {
     case 1:
-        printf("You selected play alone\n");
+        play_alone();
         break;
     case 2:
-        printf("You selected play alone\n");
+        play_with_someone();
         break;
     case 3:
-        printf("Your scores:\n");
+        get_scores();
         break;
     
     default:
