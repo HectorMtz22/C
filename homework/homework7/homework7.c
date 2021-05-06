@@ -15,11 +15,11 @@ int main() {
     welcome(normalTime);
     adminStatus = isEmployee(); 
     if (adminStatus) {
-        database = fopen("data/admin.txt", "a");
+        database = fopen("data/admin.txt", "ra");
         read(database);
         fclose(database);
     } else {
-        database = fopen("data/employees.txt", "a");
+        database = fopen("data/employees.txt", "ra");
         read(database);
         fclose(database);
     }
