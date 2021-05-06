@@ -6,10 +6,13 @@
 
 #include <stdio.h>
 #include <time.h>
+#include "homework7.h"
+
 
 int main() {
-    long int tp = clock();
-    struct tm * normalTime = time(&tp);
-    printf("%tm", normalTime );
+    long int tp = time(0);
+    struct tm * normalTime = localtime(&tp);
+    welcome(normalTime);
+    printf("%d", isEmployee());
     return 0;
 }
