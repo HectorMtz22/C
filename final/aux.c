@@ -5,7 +5,8 @@
 int welcome() {
     int number;
     printf("Hi, You are going to play the 'Tic Tac Toe' game! (El Gato para los compas)\n");
-    printf("Write a number:....\n1 for play alone\n2 for play with another person\n3 for check your log\n");
+    // I modified the next line
+    printf("Write a number:....\n1 for play alone (This doesn't Work)\n2 for play with another person\n3 for check your log (This doesn't Work)\n");
     scanf("%d", &number);
     return number;
 }
@@ -69,7 +70,7 @@ int play() {
 // If the initial case is 1
 int play_alone() {
     printf("You selected play alone\n");
-    play();
+    printf("This doesn't work at the moment\n");
 }
 
 // If the initial case is 2
@@ -81,4 +82,5 @@ int play_with_someone() {
 // If the initial case is 3
 int get_scores() {
     printf("Your scores:\n");
+    printf("This doesn't work at the moment\n");
 }
