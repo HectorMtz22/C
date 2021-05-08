@@ -28,19 +28,32 @@ void free_memory() {
     free(gato);
 }
 
+char print_char(int player) {
+    switch (player)
+    {
+    case X:
+        return 'X';
+    case O:
+        return 'O';
+    default:
+        return ' ';
+    }
+    return ' ';
+}
+
 void view() {
     extern int** gato;
     int i, j;
-    printf("\n    |   |    \n");
+    printf("\n   |   |   \n");
     for(i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             if (j != 1) {
-                printf("%s %d %s", j == 0 ? " ": "", gato[i][j], j == 2 ? " " : "");
+                printf("%s %c %s", j == 0 ? "": "", print_char(gato[i][j]), j == 2 ? "" : "");
             } else {
-                printf("| %d |", gato[i][j]);
+                printf("| %c |", print_char(gato[i][j]));
             }
         }
-        i != 2 ? printf("\n────┼───┼────\n") : printf("\n    |   |    \n");
+        i != 2 ? printf("\n───┼───┼───\n") : printf("\n   |   |   \n");
     }
     printf("\n");
 }
