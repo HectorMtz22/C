@@ -1,4 +1,6 @@
 #include "tictac.h"
+#define X 1
+#define O 2
 
 int welcome() {
     int number;
