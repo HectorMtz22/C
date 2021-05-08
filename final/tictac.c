@@ -1,5 +1,7 @@
 #include "tictac.h"
 
+int** gato;
+
 int main() {
     int initial = welcome(); // Principal Menu
     switch (initial) {

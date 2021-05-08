@@ -8,20 +8,59 @@ int welcome() {
     return number;
 }
 
-// Basic rules for the game
-int play() {
-
+void reserve_memory() {
+    extern int** gato;
+    int i;
+    gato = (int**)malloc(sizeof(int*));
+    for (i = 0; i < 3; i++) {
+        gato[i] = (int*)malloc(sizeof(int));
+    }
 }
 
+void free_memory() {
+    extern int** gato;
+    int i;
+    for (i = 0; i < 3; i++) {
+        free(gato[i]);
+    }
+    free(gato);
+}
+
+void view() {
+    extern int** gato;
+    int i, j;
+    printf("\n    |   |    \n");
+    for(i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (j != 1) {
+                printf("%s %d %s", j == 0 ? " ": "", gato[i][j], j == 2 ? " " : "");
+            } else {
+                printf("| %d |", gato[i][j]);
+            }
+        }
+        i != 2 ? printf("\n────┼───┼────\n") : printf("\n    |   |    \n");
+    }
+    printf("\n");
+}
+
+// Basic rules for the game
+int play() {
+    reserve_memory();
+    view();
+
+    free_memory();
+}
 
 // If the initial case is 1
 int play_alone() {
     printf("You selected play alone\n");
+    play();
 }
 
 // If the initial case is 2
 int play_with_someone() {
     printf("You selected play with another person\n");
+    play();
 }
 
 // If the initial case is 3
