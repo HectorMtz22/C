@@ -62,23 +62,27 @@ void view() {
 
 
 // Basic rules for the game
-int play() {
+int play(int* role) {
     char c; 
-    int counter = 0;
     int row;
+    int counter;
     char column;
-    reserve_memory();
     view();
     printf("Write the column with the row: Ex: 'A1'\n");
     while((c = getchar()) != EOF) {
         switch (c) {
+            case '\n':
+            return 0;
+                
+
+
         default:
             if (counter == 0) {
-                column = atoi(c);
-                counter++;
+                column = atoi(&c);
+                (counter++);
             } else {
                 row = c;
-                counter = 0;
+                (counter) = 0;
             }
             break;
         }
@@ -88,7 +92,10 @@ int play() {
     printf("%c %d\n", column, row);
     
 
-    free_memory();
+}
+
+int check() {
+    return 1;
 }
 
 // If the initial case is 1
@@ -99,8 +106,13 @@ int play_alone() {
 
 // If the initial case is 2
 int play_with_someone() {
+    int role = 0;
+    reserve_memory();
     printf("You selected play with another person\n");
-    play();
+    while (check()) {
+        play(&role);
+    }
+    free_memory();
 }
 
 // If the initial case is 3
