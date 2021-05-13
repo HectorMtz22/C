@@ -12,6 +12,10 @@ We can play with 2 people or with one person and the computer
 
 When you got 3 'x' or 3 'o' in a row, you win
 
+## Playing
+
+<img src="img/play/1.png">
+
 ## Compiling
 
 You MUST compile like this:
