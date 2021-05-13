@@ -14,7 +14,17 @@ When you got 3 'x' or 3 'o' in a row, you win
 
 ## Playing
 
+### Introduction
+
+We have a little menu with different options:
+
 <img src="img/play/1.png">
+
+### Grid
+
+We have a little grid of the game that is a Matrix like this:
+
+<img src="img/play/2.png">
 
 ## Compiling
 
