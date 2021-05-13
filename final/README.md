@@ -26,6 +26,10 @@ We have a little grid of the game that is a Matrix like this:
 
 <img src="img/play/2.png">
 
+You will enter something like 'A1' and the program will recognize the position in the matrix
+
+(Column with letters, Row with numbers)
+
 ## Compiling
 
 You MUST compile like this:
