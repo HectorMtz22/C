@@ -67,31 +67,28 @@ int play(int* role) {
     int row;
     int counter;
     char column;
+    extern int** gato;
     view();
     printf("Write the column with the row: Ex: 'A1'\n");
-    while((c = getchar()) != EOF) {
+    //while ( (c = getchar()) != '\n' && c != EOF );
+    while((c = getchar()) != EOF && c != '\n') {
         switch (c) {
-            case '\n':
-            return 0;
-                
-
-
         default:
             if (counter == 0) {
-                column = atoi(&c);
-                (counter++);
+                row = (c - '0' - 1);
+                counter++;
             } else {
-                row = c;
-                (counter) = 0;
+                column = (c - '0' - 49);
+                counter = 0;
             }
             break;
         }
-        
     }
-
-    printf("%c %d\n", column, row);
-    
-
+    if (column >= 0 && column < 3 && row >= 0 && row < 3) {
+        printf("%d %d\n", column, row);
+        gato[column][row] = *role;
+    }
+    return 0;
 }
 
 int check() {
@@ -106,11 +103,17 @@ int play_alone() {
 
 // If the initial case is 2
 int play_with_someone() {
-    int role = 0;
+    int role = 1;
     reserve_memory();
     printf("You selected play with another person\n");
     while (check()) {
-        play(&role);
+        if (role == 1) {
+            play(&role);
+            role = 2;
+        } else {
+            play(&role);
+            role = 1;
+        }
     }
     free_memory();
 }
