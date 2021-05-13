@@ -1,4 +1,5 @@
 #include "tictac.h"
+#include <stdlib.h>
 #define X 1
 #define O 2
 
@@ -59,10 +60,33 @@ void view() {
     printf("\n");
 }
 
+
 // Basic rules for the game
 int play() {
+    char c; 
+    int counter = 0;
+    int row;
+    char column;
     reserve_memory();
     view();
+    printf("Write the column with the row: Ex: 'A1'\n");
+    while((c = getchar()) != EOF) {
+        switch (c) {
+        default:
+            if (counter == 0) {
+                column = atoi(c);
+                counter++;
+            } else {
+                row = c;
+                counter = 0;
+            }
+            break;
+        }
+        
+    }
+
+    printf("%c %d\n", column, row);
+    
 
     free_memory();
 }
