@@ -1,6 +1,12 @@
-# C
+# C - By HectorMtz22
 
-## By HectorMtz22
+## Final Project of Structured Programming
+
+For this Subject I create a folder in this repo called `final`
+
+You can navigate to this folder or click the link below:
+
+[Go to the final project](final/README.md)
 
 ## Homework 5
 
