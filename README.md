@@ -6,7 +6,7 @@ For this Subject I create a folder in this repo called `final`
 
 You can navigate to this folder or click the link below:
 
-[Go to the final project](final/README.md)
+[Go to the final project](final)
 
 ## Homework 5
 
