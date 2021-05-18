@@ -64,7 +64,7 @@ void view() {
     printf("\n");
 }
 
-void pushWinner(int players) {
+void pushWinner(int players, int role) {
     char temp1[10];
     char temp2[10];
     long int tp = time(0);
@@ -79,6 +79,14 @@ void pushWinner(int players) {
         fclose(archive);
 
         return;
+
+    } else {
+        printf("Name of the player: \n");
+        scanf("%s", temp1);
+        fprintf(archive, "%s %s %ld\n", role == X ? "CPU" : temp1, role == O ? "CPU" : temp1, time(&tp));
+        fclose(archive);
+        return;
+
 
     }
     
@@ -165,8 +173,9 @@ int play_alone() {
     }
     // When someone wins
     view();
-    printf("%s Won!\n", role == X ? "O" : "X"); // Variable role is inverted for line 141
-    pushWinner(2);
+    role == X ? (role = O) : (role = X); // Change the role again for correct results
+    printf("%s Won!\n", role == X ? "X" : "O"); // Variable role is inverted for line 141
+    pushWinner(1, role);
     free_memory();
 }
 
@@ -192,7 +201,7 @@ int play_with_someone() {
     // When someone wins
     view();
     printf("%s Won!\n", role == X ? "O" : "X"); // Variable role is inverted for line 141
-    pushWinner(2);
+    pushWinner(2, role);
     free_memory();
 }
 
