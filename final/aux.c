@@ -223,6 +223,17 @@ int play_with_someone() {
 
 // If the initial case is 3
 int get_scores() {
+    char winner[10];
+    char looser[10];
+    long int timestamp;
+    char ch;
     printf("Your scores:\n");
-    printf("This doesn't work at the moment\n");
+    FILE * archive = fopen("results.txt", "r");
+
+    //read character by character and check for new line
+    while((ch=fgetc(archive))!=EOF) {
+        fscanf(archive, "%s %s %ld", winner, looser, &timestamp);
+        printf("%s %s %ld\n", winner, looser, timestamp);
+    }
+    fclose(archive);
 }
