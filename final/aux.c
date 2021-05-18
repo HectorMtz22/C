@@ -7,7 +7,7 @@ int welcome() {
     int number;
     printf("Hi, You are going to play the 'Tic Tac Toe' game! (El Gato para los compas)\n");
     // I modified the next line
-    printf("Write a number:....\n1 for play alone (This doesn't Work)\n2 for play with another person\n3 for check your log (This doesn't Work)\n");
+    printf("Write a number:....\n1 for play alone\n2 for play with another person\n3 for check your log\n");
     scanf("%d", &number);
     return number;
 }
