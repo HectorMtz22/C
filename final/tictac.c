@@ -1,10 +1,10 @@
-#include "tictac.h"
+#include "tictac.h" // Include my library
 
 int** gato;
 
 int main() {
     int initial = welcome(); // Principal Menu
-    switch (initial) {
+    switch (initial) { // According to the welcome menu
     case 1:
         play_alone();
         break;
@@ -16,6 +16,7 @@ int main() {
         break;
     
     default:
+        // If is not a valid input
         printf("The program didn't recognize your number, it will exit now\n");
         break;
     }
