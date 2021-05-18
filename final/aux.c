@@ -1,5 +1,5 @@
 #include "tictac.h"
-#include <stdlib.h>
+#include <time.h>
 #define X 1
 #define O 2
 
@@ -67,6 +67,7 @@ void view() {
 void pushWinner(int players) {
     char temp1[10];
     char temp2[10];
+    long int tp = time(0);
     FILE * archive = fopen("results.txt", "a");
     if (players == 2) {
         printf("Name of the winner: \n");
@@ -74,7 +75,7 @@ void pushWinner(int players) {
         printf("Name of the looser: \n");
         scanf("%s", temp2);
 
-        fprintf(archive, "%s %s\n", temp1, temp2);
+        fprintf(archive, "%s %s %ld\n", temp1, temp2, time(&tp));
         fclose(archive);
 
         return;
