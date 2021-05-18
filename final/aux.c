@@ -46,16 +46,18 @@ char print_char(int player) {
 void view() {
     extern int** gato;
     int i, j;
-    printf("\n   |   |   \n");
+    printf("\n  A | B | C \n");
+    printf("    |   |   \n");
     for(i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-            if (j != 1) {
-                printf("%s %c %s", j == 0 ? "": "", print_char(gato[i][j]), j == 2 ? "" : "");
-            } else {
+            if (j == 0) {
+                printf("%d %c ", i + 1, print_char(gato[i][j]));
+           
+            } else if (j == 1) {
                 printf("| %c |", print_char(gato[i][j]));
             }
         }
-        i != 2 ? printf("\n───┼───┼───\n") : printf("\n   |   |   \n");
+        i != 2 ? printf("\n ───┼───┼───\n") : printf("\n    |   |   \n");
     }
     printf("\n");
 }
