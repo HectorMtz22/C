@@ -153,6 +153,7 @@ int play_alone() {
     extern int** gato;
     reserve_memory();
     printf("You selected play alone\n");
+    srand(time(0));
     while (check() == 0) {
         if (role == X) {
             column = rand() % 3;
