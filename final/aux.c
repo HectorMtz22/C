@@ -62,18 +62,19 @@ void view() {
 
 
 // Basic rules for the game
-void play(int* role, char* column, int* row) {
+void play(int* role, int* column, int* row) {
     char c; 
     int counter;
     view();
     printf("Write the column with the row: Ex: 'A1'\n");
     //while ( (c = getchar()) != '\n' && c != EOF );
     while((c = getchar()) != EOF && c != '\n') {
+        printf("%c", (c - '0'));
         switch (c) {
         default:
             if (counter == 0) {
                 *row = (c - '0' - 1);
-                counter++;
+                counter = 1;
             } else {
                 *column = (c - '0' - 49);
                 counter = 0;
@@ -85,7 +86,31 @@ void play(int* role, char* column, int* row) {
 }
 
 int check() {
-    return 1;
+    extern int **gato;
+    int i, j;
+
+    // Horizontal lines
+    for (i = 0; i < 3; i++) {
+        if (gato[i][0] == gato[i][1] && gato[i][0] == gato[i][2] && gato[i][0] != 0) {
+            return gato[i][0];
+        }
+    }
+ 
+    // Vertical lines
+    for (i = 0; i < 3; i++) {
+        if (gato[0][i] == gato[1][i] && gato[0][i] == gato[2][i] && gato[0][i] != 0) {
+            return gato[0][i];
+        }
+    }
+
+    // Diagonal lines
+    if (gato[0][0] == gato[1][1] && gato[0][0] == gato[2][2] && gato[0][0] != 0) {
+       return gato[0][0];
+    }
+    if (gato[2][0] == gato[1][1] && gato[2][0] == gato[0][2] && gato[2][0] != 0) {
+       return gato[2][0];
+    }
+    return 0;
 }
 
 // If the initial case is 1
@@ -97,25 +122,25 @@ int play_alone() {
 // If the initial case is 2
 int play_with_someone() {
     int role = X;
-    char column;
+    int column;
     int row;
     extern int** gato;
     reserve_memory();
     printf("You selected play with another person\n");
-    while (check()) {
+    while (check() == 0) {
         play(&role, &column, &row);
         if (column >= 0 && column < 3 && row >= 0 && row < 3) {
-        printf("%d %d\n", column, row);
-        if (gato[column][row] != 0) {
-            printf("This box isn't available!\n");
-        } else {
-            gato[column][row] = role;
-            role == X ? (role = O) : (role = X);
+            printf("%d %d\n", column, row);
+            if (gato[column][row] != 0) {
+                printf("This box isn't available!\n");
+            } else {
+                gato[column][row] = role;
+                role == X ? (role = O) : (role = X);
+            }
         }
     }
-
-        printf("%d, %d, %d\n", role, column, row);
-    }
+    view();
+    printf("%s Won!\n", role == X ? "X" : "O");
     free_memory();
 }
 
