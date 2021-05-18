@@ -55,6 +55,8 @@ void view() {
            
             } else if (j == 1) {
                 printf("| %c |", print_char(gato[i][j]));
+            } else {
+                printf(" %c ", print_char(gato[i][j]));
             }
         }
         i != 2 ? printf("\n ───┼───┼───\n") : printf("\n    |   |   \n");
@@ -131,12 +133,11 @@ int play_with_someone() {
     printf("You selected play with another person\n");
     while (check() == 0) {
         play(&role, &column, &row);
-        if (column >= 0 && column < 3 && row >= 0 && row < 3) {
-            printf("%d %d\n", column, row);
-            if (gato[column][row] != 0) {
+        if (column >= 0 && column <= 3 && row >= 0 && row <= 3) {
+            if (gato[row][column] != 0) {
                 printf("This box isn't available!\n");
             } else {
-                gato[column][row] = role;
+                gato[row][column] = role;
                 role == X ? (role = O) : (role = X);
             }
         }
