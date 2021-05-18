@@ -1,8 +1,12 @@
 # Tic Tac Toe
 
+## Demo
+
+[Link that doesn't work](https://hmtzdev.tech)
+
 ## The Final Project of Structured Programming
 
-This program consist in the famous tic tac toe (El Gato para los compas)
+This program consist in the famous tic tac toe game (El Gato para los compas)
 
 ## Rules
 
@@ -37,3 +41,7 @@ You MUST compile like this:
 `$ gcc tictac.h aux.c tictac.c`
 
 ### By hectormtz (HectorMtz22)
+
+#### Credits (Help, and Greetings)
+
+[The Coding Train](https://www.youtube.com/watch?v=GTWrWM1UsnA)
