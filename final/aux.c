@@ -139,8 +139,35 @@ int check() {
 
 // If the initial case is 1
 int play_alone() {
+    int role = X;
+    int column;
+    int row;
+    extern int** gato;
+    reserve_memory();
     printf("You selected play alone\n");
-    printf("This doesn't work at the moment\n");
+    while (check() == 0) {
+        if (role == X) {
+            column = rand() % 3;
+            row = rand() % 3;
+        } else {
+            play(&role, &column, &row);
+        }
+        if (column >= 0 && column <= 3 && row >= 0 && row <= 3) {
+            if (gato[row][column] != 0) {
+                if (role == O) {
+                    printf("This box isn't available!\n");
+                }
+            } else {
+                gato[row][column] = role;
+                role == X ? (role = O) : (role = X); // Change the role
+            }
+        }
+    }
+    // When someone wins
+    view();
+    printf("%s Won!\n", role == X ? "O" : "X"); // Variable role is inverted for line 141
+    pushWinner(2);
+    free_memory();
 }
 
 // If the initial case is 2
