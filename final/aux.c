@@ -64,6 +64,25 @@ void view() {
     printf("\n");
 }
 
+void pushWinner(int players) {
+    char temp1[10];
+    char temp2[10];
+    FILE * archive = fopen("results.txt", "a");
+    if (players == 2) {
+        printf("Name of the winner: \n");
+        scanf("%s", temp1);
+        printf("Name of the looser: \n");
+        scanf("%s", temp2);
+
+        fprintf(archive, "%s %s\n", temp1, temp2);
+        fclose(archive);
+
+        return;
+
+    }
+    
+    return;
+}
 
 // Basic rules for the game
 void play(int* role, int* column, int* row) {
@@ -145,6 +164,7 @@ int play_with_someone() {
     // When someone wins
     view();
     printf("%s Won!\n", role == X ? "O" : "X"); // Variable role is inverted for line 141
+    pushWinner(2);
     free_memory();
 }
 
