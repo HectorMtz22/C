@@ -138,12 +138,13 @@ int play_with_someone() {
                 printf("This box isn't available!\n");
             } else {
                 gato[row][column] = role;
-                role == X ? (role = O) : (role = X);
+                role == X ? (role = O) : (role = X); // Change the role
             }
         }
     }
+    // When someone wins
     view();
-    printf("%s Won!\n", role == X ? "X" : "O");
+    printf("%s Won!\n", role == X ? "O" : "X"); // Variable role is inverted for line 141
     free_memory();
 }
 
