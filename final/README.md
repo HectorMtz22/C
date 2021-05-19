@@ -4,8 +4,6 @@
 
 [Video on YT](https://www.youtube.com/watch?v=fmE-H8HFVrQ)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fmE-H8HFVrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## The Final Project of Structured Programming
 
 This program consist in the famous tic tac toe game (El Gato para los compas)
