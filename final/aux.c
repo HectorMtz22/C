@@ -114,7 +114,6 @@ void play(int* role, int* column, int* row) {
     printf("Write the column with the row: Ex: 'A1'\n");
     // Loop for capture the input 'A1'
     while((c = getchar()) != EOF && c != '\n') {
-        printf("%c", (c - '0'));
         switch (c) {
         default:
             if (counter == 0) {
