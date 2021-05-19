@@ -52,21 +52,21 @@ void view() {
     extern int** gato;
     int i, j;
     // Printing stuff
-    printf("\n  A | B | C \n");
-    printf("    |   |   \n");
+    printf("\n  A   B   C \n");
+    printf("    │   │   \n");
     for(i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             if (j == 0) { // Row 1
                 printf("%d %c ", i + 1, print_char(gato[i][j]));
            
             } else if (j == 1) { // Row 2
-                printf("| %c |", print_char(gato[i][j]));
+                printf("│ %c │", print_char(gato[i][j]));
             } else {    // Row 3
                 printf(" %c ", print_char(gato[i][j]));
             }
         }
         // The Intersections
-        i != 2 ? printf("\n ───┼───┼───\n") : printf("\n    |   |   \n");
+        i != 2 ? printf("\n ───┼───┼───\n") : printf("\n    │   │   \n");
     }
     // For an aesthetic view 
     printf("\n");
