@@ -225,15 +225,28 @@ int play_with_someone() {
 int get_scores() {
     char winner[10];
     char looser[10];
-    long int timestamp;
+    long int timestamp; // For storing the integer
     char ch;
+    int i = 0;
+    struct tm* timeToPrint; // New variable to print date and hour
     printf("Your scores:\n");
-    FILE * archive = fopen("results.txt", "r");
+    FILE * archive = fopen("results.txt", "r"); // Open the document
 
-    //read character by character and check for new line
-    while((ch=fgetc(archive))!=EOF) {
-        fscanf(archive, "%s %s %ld", winner, looser, &timestamp);
-        printf("%s %s %ld\n", winner, looser, timestamp);
+    // If the document doesn't exist
+    if (archive == NULL) {
+        printf("We have a problem reading this file\n");
+        return 1;
     }
-    fclose(archive);
+
+    // Read character by character and check for new line
+    while((ch=fgetc(archive))!=EOF) { // If it contain data
+        i++; // Counter for lines
+        fscanf(archive, "%s %s %ld\n", winner, looser, &timestamp); // Scan the line of the document
+        timeToPrint = localtime(&timestamp); // Convert timestamp to a struct tm* for print date and hour
+        printf("N° %d\n", i); // Prints the number of record
+        printf("Winner! %c%s\nLooser! %s \n", ch, winner, looser); // Prints the Winner and the Looser
+        printf("Game played %d/%d/%d at %d:%d\n\n", timeToPrint->tm_mday, timeToPrint->tm_mon + 1, timeToPrint->tm_year + 1900, timeToPrint->tm_hour, timeToPrint->tm_min);
+    }
+    printf("There are %d records in this text file\n", i); // Print the total records
+    fclose(archive); // Close document
 }
