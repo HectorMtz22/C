@@ -244,7 +244,7 @@ int get_scores() {
         timeToPrint = localtime(&timestamp); // Convert timestamp to a struct tm* for print date and hour
         printf("N° %d\n", i); // Prints the number of record
         printf("Winner! %c%s\nLooser! %s \n", ch, winner, looser); // Prints the Winner and the Looser
-        printf("Game played %d/%d/%d at %d:%d\n\n", timeToPrint->tm_mday, timeToPrint->tm_mon + 1, timeToPrint->tm_year + 1900, timeToPrint->tm_hour, timeToPrint->tm_min);
+        printf("Game played %d/%d/%d at %d:%02d\n\n", timeToPrint->tm_mday, timeToPrint->tm_mon + 1, timeToPrint->tm_year + 1900, timeToPrint->tm_hour, timeToPrint->tm_min);
     }
     printf("There are %d records in this text file\n", i); // Print the total records
     fclose(archive); // Close document
