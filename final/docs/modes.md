@@ -4,15 +4,15 @@
 
 This is when you want to play versus the CPU
 
-<img src="img/modes/mode1_intro.png">
+<img src="../img/modes/mode1_intro.png">
 
 When you play, automatically the CPU plays the other player
 
-<img src="img/modes/mode1_second.png">
+<img src="../img/modes/mode1_second.png">
 
 When someone wins, you will enter your name:
 
-<img src="img/modes/mode1_third.png">
+<img src="../img/modes/mode1_third.png">
 
 
 #### 2) MultiPlayer 
