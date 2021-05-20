@@ -19,7 +19,7 @@ When someone wins, you will enter your name:
 
 This is when you want to play versus someone else locally
 
-<img src="img/modes/mode2_intro.png">
+<img src="../img/modes/mode2_intro.png">
 
 When someone introduce the cell, is the turn of the second player
 
