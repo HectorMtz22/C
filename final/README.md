@@ -57,3 +57,14 @@ You MUST compile like this:
 #### Credits (Help, and Greetings)
 
 [The Coding Train](https://www.youtube.com/watch?v=GTWrWM1UsnA)
+
+
+# Autoeval
+
+1: complexity 3 (I think this game doesn't have a lot of complexity but I did it single (With random positions) and multiplayer, and added a history)
+2: functionality 3 (I made error messages to prevent `Segmentation fault`)
+3: code 3 (I clean the functions and made subroutines)
+4: storage 3 (I separate libraries that I'm using in tictac.c and aux.c)
+5: documentation 3 (I made a report with md in different archives)
+
+I think for this project I have 15 points
