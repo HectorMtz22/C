@@ -12,13 +12,13 @@ This program consist in the famous tic tac toe game (El Gato para los compas)
 
 If you wish watch the modes of this game, please click the link below:
 
-[Modes.md](modes.md)
+[Modes.md](docs/modes.md)
 
 ### Considerations
 
 If you want to see the Considerations, messages when an error happen, please click below:
 
-[Considerations.md](considerations.md)
+[Considerations.md](docs/considerations.md)
 
 ### Rules
 
